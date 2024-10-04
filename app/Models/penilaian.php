@@ -26,13 +26,13 @@ class Penilaian extends Model
         'catatan',
     ];
 
-    // Relasi ke model Guru
+    /**
+     * Relasi ke model Guru.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function guru()
     {
         return $this->belongsTo(Guru::class, 'guru_id', 'id_guru');
     }
-}
-public function guru()
-{
-    return $this->belongsTo(Guru::class, 'guru_id', 'id_guru');
 }
